@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IngressX - 오픈소스 신청·검사·승인·반입 플랫폼</title>
+  <meta name="description" content="Public Repository 직접 사용을 차단하고, 승인된 오픈소스만 Internal Repository에 반입하여 사용하게 합니다.">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="images/로고투명.png" alt="IngressX"></a>
+      <div class="nav__menu">
+        <a href="#why" class="nav__link">왜 필요한가</a>
+        <a href="#product" class="nav__link">제품소개</a>
+        <a href="#features" class="nav__link">핵심기능</a>
+        <a href="#effect" class="nav__link">도입효과</a>
+      </div>
+      <button class="nav__toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">
+        검사 및 승인된 오픈소스만 안전하게 반입합니다
+        <img class="brand" src="images/로고투명.png" alt="IngressX">
+      </h1>
+      <p class="hero__desc">
+        Public Repository 직접 사용을 차단하고,<br>
+        승인된 오픈소스만 Internal Repository에 반입하여 사용하게 합니다.
+      </p>
+      <div class="hero__buttons">
+        <a href="#features" class="btn btn--outline btn--lg">핵심기능 보기</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+    </div>
+  </section>
+
+  <!-- Why: Stats -->
+  <section class="section" id="why">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>오픈소스, 이미 우리 안에 있습니다</h2>
+        <p>오픈소스는 선택이 아닌 필수입니다.<br>문제는 "사용 여부"가 아니라, <span class="highlight">"어떻게 관리하는가"</span> 입니다.</p>
+      </div>
+      <div class="stats">
+        <div class="stat-card fade-in fade-in-delay-1">
+          <div class="stat-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <div class="stat-card__number" data-count="97" data-suffix="%">0%</div>
+          <div class="stat-card__label">상용 SW 포함 비율</div>
+          <div class="stat-card__desc">상용 소프트웨어 중 오픈소스 포함 비율</div>
+        </div>
+        <div class="stat-card fade-in fade-in-delay-2">
+          <div class="stat-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div class="stat-card__number" data-count="150" data-suffix="+">0</div>
+          <div class="stat-card__label">평균 의존성 수</div>
+          <div class="stat-card__desc">평균 Java 애플리케이션의 오픈소스 의존성 수</div>
+        </div>
+        <div class="stat-card fade-in fade-in-delay-3">
+          <div class="stat-card__icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="stat-card__number">수십 개</div>
+          <div class="stat-card__label">전자정부 표준프레임워크</div>
+          <div class="stat-card__desc">표준프레임워크 포함 오픈소스 컴포넌트</div>
+        </div>
+      </div>
+      <p class="section__source">출처: Synopsys OSSRA 2025 / Sonatype 2024 / NIA 표준프레임워크 포털</p>
+    </div>
+  </section>
+
+  <!-- Why: Threats -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>오픈소스 보안 위협, 폭발적으로 증가하고 있습니다</h2>
+      </div>
+      <div class="threat-grid">
+        <div class="threat-chart fade-in">
+          <div class="threat-chart__title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            CVE 발견 건수 추이
+          </div>
+          <div class="chart-bars">
+            <div class="chart-bar">
+              <div class="chart-bar__value">25,081</div>
+              <div class="chart-bar__track">
+                <div class="chart-bar__fill" data-height="51.8%" style="background:var(--primary-light);"></div>
+              </div>
+              <div class="chart-bar__label">2022년</div>
+            </div>
+            <div class="chart-bar">
+              <div class="chart-bar__value">28,902</div>
+              <div class="chart-bar__track">
+                <div class="chart-bar__fill" data-height="59.7%" style="background:var(--primary-light);"></div>
+              </div>
+              <div class="chart-bar__label">2023년</div>
+            </div>
+            <div class="chart-bar">
+              <div class="chart-bar__value">40,308</div>
+              <div class="chart-bar__track">
+                <div class="chart-bar__fill" data-height="83.2%" style="background:var(--primary);"></div>
+              </div>
+              <div class="chart-bar__label">2024년</div>
+            </div>
+            <div class="chart-bar">
+              <div class="chart-bar__value">48,448</div>
+              <div class="chart-bar__track">
+                <div class="chart-bar__fill" data-height="100%" style="background:var(--danger);"></div>
+              </div>
+              <div class="chart-bar__label">2025년</div>
+            </div>
+          </div>
+        </div>
+        <div class="threat-stats fade-in fade-in-delay-1">
+          <div class="threat-stat-box">
+            <div class="threat-stat-box__label">2024년 악성 패키지 발견</div>
+            <div class="threat-stat-box__row"><span class="threat-stat-box__number" data-count="512,847">0</span><span class="threat-stat-box__unit">건</span></div>
+            <div class="threat-stat-box__change">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+              전년 대비 156% 증가
+            </div>
+          </div>
+          <div class="threat-stat-box">
+            <div class="threat-stat-box__label">2019년 이후 누적 악성 패키지</div>
+            <div class="threat-stat-box__row"><span class="threat-stat-box__number" data-count="778,529">0</span><span class="threat-stat-box__unit">건</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="threat-warning fade-in">
+        <p>매년 수만 건의 새로운 취약점이 발견되고 있으며, 악의적인 <span class="highlight--danger">공급망 공격</span>은 기하급수적으로 증가하고 있습니다.</p>
+      </div>
+      <p class="section__source">출처: CVE Details / Sonatype 2024</p>
+    </div>
+  </section>
+
+  <!-- Why: Problems -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>오픈소스 사용은 늘어나지만,<br>관리 체계는 따라가지 못하고 있습니다</h2>
+      </div>
+      <div class="problems">
+        <div class="problem-card fade-in fade-in-delay-1">
+          <div class="problem-card__header">
+            <div class="problem-card__num">1</div>
+            <h4 class="problem-card__title">사후 발견, 사후 대응</h4>
+          </div>
+          <div class="problem-card__flow">
+            <span class="problem-card__desc">개발 중/후 취약점 발견</span>
+            <span class="problem-card__arrow">→</span>
+            <span class="problem-card__result">이미 코드베이스에 침투</span>
+          </div>
+        </div>
+        <div class="problem-card fade-in fade-in-delay-2">
+          <div class="problem-card__header">
+            <div class="problem-card__num">2</div>
+            <h4 class="problem-card__title">수동 프로세스</h4>
+          </div>
+          <div class="problem-card__flow">
+            <span class="problem-card__desc">개발자가 직접 Public Repository 접근</span>
+            <span class="problem-card__arrow">→</span>
+            <span class="problem-card__result">검사 없이 다운로드</span>
+          </div>
+        </div>
+        <div class="problem-card fade-in fade-in-delay-3">
+          <div class="problem-card__header">
+            <div class="problem-card__num">3</div>
+            <h4 class="problem-card__title">내부 Repository 미관리</h4>
+          </div>
+          <div class="problem-card__flow">
+            <span class="problem-card__desc">검사 및 승인되지 않은 오픈소스 혼재</span>
+            <span class="problem-card__arrow">→</span>
+            <span class="problem-card__result">안전 여부 불명확</span>
+          </div>
+        </div>
+        <div class="problem-card fade-in fade-in-delay-4">
+          <div class="problem-card__header">
+            <div class="problem-card__num">4</div>
+            <h4 class="problem-card__title">표준화 부재</h4>
+          </div>
+          <div class="problem-card__flow">
+            <span class="problem-card__desc">팀/프로젝트마다 다른 검사 방식</span>
+            <span class="problem-card__arrow">→</span>
+            <span class="problem-card__result">일관성 없는 보안 수준</span>
+          </div>
+        </div>
+      </div>
+      <div class="section__quote fade-in">
+        <p><strong>사후 대응</strong>이 아닌, <span class="highlight">사전 예방 체계</span>가 필요합니다.<br>
+        단순 검사뿐 아니라, 신청-검사-승인-관리의 체계적인 통합 솔루션이 필요합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product -->
+  <section class="section section--light" id="product">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>IngressX를 통해 검사 후 승인된 오픈소스만<br>내부 Repository에서 안전하게 사용합니다</h2>
+      </div>
+
+      <!-- Flow Diagram -->
+      <div class="flow fade-in">
+        <div class="flow__step">
+          <div class="flow__step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-gray)" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+          </div>
+          <div class="flow__step-name">개발자</div>
+          <div class="flow__step-label">의존성 파일 업로드</div>
+        </div>
+        <div class="flow__arrow">&#8594;</div>
+        <div class="flow__step">
+          <div class="flow__step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-gray)" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div class="flow__step-name">Public Repo</div>
+          <div class="flow__step-label">자동 다운로드</div>
+        </div>
+        <div class="flow__arrow">&#8594;</div>
+        <div class="flow__step flow__step--highlight">
+          <div class="flow__step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="flow__step-name">IngressX</div>
+          <div class="flow__step-label">사전 검사</div>
+        </div>
+        <div class="flow__arrow">&#8594;</div>
+        <div class="flow__step">
+          <div class="flow__step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <div class="flow__step-name">승인 및 저장</div>
+          <div class="flow__step-label">Internal Repo</div>
+        </div>
+        <div class="flow__arrow">&#8594;</div>
+        <div class="flow__step">
+          <div class="flow__step-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--text-gray)" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="flow__step-name">개발 환경</div>
+          <div class="flow__step-label">Maven, npm, pip...</div>
+        </div>
+      </div>
+
+      <!-- Process Steps -->
+      <div class="process fade-in">
+        <div class="process__step">
+          <div class="process__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+          </div>
+          <div class="process__header">
+            <div class="process__num">1</div>
+            <div class="process__name">신청</div>
+          </div>
+          <div class="process__desc">"의존성 선언 파일" 업로드</div>
+        </div>
+        <div class="process__arrow">&#8594;</div>
+        <div class="process__step">
+          <div class="process__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="process__header">
+            <div class="process__num">2</div>
+            <div class="process__name">검사</div>
+          </div>
+          <div class="process__desc">CVE + 의존성 분석 자동화</div>
+        </div>
+        <div class="process__arrow">&#8594;</div>
+        <div class="process__step">
+          <div class="process__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+          </div>
+          <div class="process__header">
+            <div class="process__num">3</div>
+            <div class="process__name">승인요청</div>
+          </div>
+          <div class="process__desc">결과 검토 후 승인 요청</div>
+        </div>
+        <div class="process__arrow">&#8594;</div>
+        <div class="process__step">
+          <div class="process__icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="process__header">
+            <div class="process__num">4</div>
+            <div class="process__name">승인/반려</div>
+          </div>
+          <div class="process__desc">최종 판단 → Repository 저장</div>
+        </div>
+      </div>
+
+      <div class="section__quote fade-in">
+        <p>IngressX는 오픈소스의 <span class="highlight">"출입국 심사"</span> 체계입니다.<br>
+        문제가 있는 오픈소스는 처음부터 내부에 들어오지 못합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VS Comparison -->
+  <section class="section">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>반입 전 검사 vs 반입 후 검사,<br>무엇이 다른가?</h2>
+      </div>
+      <div class="vs-container fade-in">
+        <div class="vs-card vs-card--old">
+          <h3 class="vs-card__title">반입 후 검사 (기존 방식)</h3>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10007;</span>
+            <span class="vs-card__label">검사 시점</span>
+            <span class="vs-card__value">이미 코드에 포함된 후</span>
+          </div>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10007;</span>
+            <span class="vs-card__label">취약점 발견</span>
+            <span class="vs-card__value">이미 사용 중</span>
+          </div>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10007;</span>
+            <span class="vs-card__label">개발자 영향</span>
+            <span class="vs-card__value">개발 중간에 오픈소스 교체</span>
+          </div>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10007;</span>
+            <span class="vs-card__label">보안 리스크</span>
+            <span class="vs-card__value">취약한 오픈소스가 일정기간 내부에 존재</span>
+          </div>
+        </div>
+        <div class="vs-badge">VS</div>
+        <div class="vs-card vs-card--new">
+          <h3 class="vs-card__title">반입 전 검사 (IngressX)</h3>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10003;</span>
+            <span class="vs-card__label">검사 시점</span>
+            <span class="vs-card__value">내부에 들어오기 전</span>
+          </div>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10003;</span>
+            <span class="vs-card__label">취약점 발견</span>
+            <span class="vs-card__value">사전 유입 차단</span>
+          </div>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10003;</span>
+            <span class="vs-card__label">개발자 영향</span>
+            <span class="vs-card__value">사전에 안전한 것만 사용</span>
+          </div>
+          <div class="vs-card__item">
+            <span class="vs-icon">&#10003;</span>
+            <span class="vs-card__label">보안 리스크</span>
+            <span class="vs-card__value">취약한 오픈소스가 내부에 존재하지 않음</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Summary -->
+  <section class="section section--light" id="features">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>IngressX, 핵심 차별점</h2>
+      </div>
+      <div class="feature-cards">
+        <div class="feature-card fade-in fade-in-delay-1">
+          <div class="feature-card__num">01</div>
+          <h4 class="feature-card__title">표준화 프로세스 제공</h4>
+          <p class="feature-card__desc">개발자의 Public Repository 직접 연결을 차단하고 WEB UI 기반의 편리한 표준화 프로세스를 제공합니다.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-2">
+          <div class="feature-card__num">02</div>
+          <h4 class="feature-card__title">반입 전 사전 검사</h4>
+          <p class="feature-card__desc">외부 오픈소스를 내부로 반입하기 전에 취약점을 검사하고, 안전한 오픈소스만 Internal Repository에 저장합니다.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-3">
+          <div class="feature-card__num">03</div>
+          <h4 class="feature-card__title">개발자 파일 그대로 활용</h4>
+          <p class="feature-card__desc">pom.xml, build.gradle, package.json, requirements.txt 등 "의존성 선언 파일"을 그대로 업로드합니다.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-4">
+          <div class="feature-card__num">04</div>
+          <h4 class="feature-card__title">다중 검사 도구</h4>
+          <p class="feature-card__desc">다중 검사 도구를 활용한 취약점 검사로 상호 보완하여 탐지 사각지대를 최소화합니다.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-5">
+          <div class="feature-card__num">05</div>
+          <h4 class="feature-card__title">유연한 Internal Repository</h4>
+          <p class="feature-card__desc">승인된 오픈소스를 Internal Repository에 저장하여 조직 표준 Repository로 운영합니다.</p>
+        </div>
+        <div class="feature-card fade-in fade-in-delay-6">
+          <div class="feature-card__num">06</div>
+          <h4 class="feature-card__title">지속적 관리 및 재검사</h4>
+          <p class="feature-card__desc">이미 내부로 유입된 오픈소스에 대해서도 주기적 재검사로 지속적인 취약점 대응을 유지합니다.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="fade-in">
+        <a href="features.html" class="btn btn--ghost btn--lg">핵심기능 자세히 보기 &#8594;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Effect -->
+  <section class="section" id="effect">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>도입시 기대효과</h2>
+      </div>
+
+      <!-- Before / After -->
+      <div class="effect-compare fade-in">
+        <div class="effect-box effect-box--before">
+          <span class="effect-box__tag">AS-IS</span>
+          <h3 class="effect-box__title">도입 전</h3>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--danger);">&#10007;</span>
+            <span>개발자가 Public Repository에서 직접 다운로드</span>
+          </div>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--danger);">&#10007;</span>
+            <span>취약점 검사 없이 사용</span>
+          </div>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--danger);">&#10007;</span>
+            <span>취약점 발견은 개발 중/후</span>
+          </div>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--danger);">&#10007;</span>
+            <span>이미 침투한 취약점 제거 어려움</span>
+          </div>
+        </div>
+        <div class="effect-arrow fade-in">&#8594;</div>
+        <div class="effect-box effect-box--after">
+          <span class="effect-box__tag">TO-BE</span>
+          <h3 class="effect-box__title">도입 후 <span style="color:var(--accent);">with IngressX</span></h3>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--success);">&#10003;</span>
+            <span>Public Repository 직접 접근 차단</span>
+          </div>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--success);">&#10003;</span>
+            <span>취약점 검사 다중화</span>
+          </div>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--success);">&#10003;</span>
+            <span>취약점 발견은 개발 전 그리고 중/후</span>
+          </div>
+          <div class="effect-box__item">
+            <span class="icon" style="color:var(--success);">&#10003;</span>
+            <span>반입전 차단 + 주기적 재검사</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Effect Cards -->
+      <div class="effect-cards">
+        <div class="effect-card fade-in fade-in-delay-1">
+          <div class="effect-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="effect-card__category">Performance</div>
+          <h4 class="effect-card__title">취약점 차단</h4>
+          <ul class="effect-card__list">
+            <li>반입 전 검사로 사전 차단</li>
+            <li>알려진 취약점 즉시 탐지</li>
+            <li>주기적 재검사로 지속적 취약점 관리</li>
+          </ul>
+        </div>
+        <div class="effect-card fade-in fade-in-delay-2">
+          <div class="effect-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div class="effect-card__category">Defense</div>
+          <h4 class="effect-card__title">공급망 공격 방어</h4>
+          <ul class="effect-card__list">
+            <li>의존성 혼동 방지</li>
+            <li>타이포스쿼팅 방지</li>
+          </ul>
+        </div>
+        <div class="effect-card fade-in fade-in-delay-3">
+          <div class="effect-card__icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="effect-card__category">Audit</div>
+          <h4 class="effect-card__title">감사 대응</h4>
+          <ul class="effect-card__list">
+            <li>모든 오픈소스 반입 이력 기록</li>
+            <li>승인 근거와 책임 소재가 명확</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark cta">
+    <div class="container">
+      <h2 class="fade-in">검사 및 승인되지 않은 오픈소스는 들어오지 못합니다</h2>
+      <p class="fade-in">IngressX 도입으로 안전한 오픈소스 관리 체계를 구축하세요.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__contacts">
+        <div class="footer__contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          techware@techware.co.kr
+        </div>
+        <div class="footer__contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          042-489-7515
+        </div>
+        <div class="footer__contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          www.IngressX.co.kr
+        </div>
+      </div>
+      <div class="footer__divider"></div>
+      <p class="footer__copy">&copy; 2026 (주)테크웨어. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>핵심기능 - IngressX</title>
+  <meta name="description" content="IngressX의 6대 핵심기능: 표준화 프로세스, 반입 전 사전 검사, 간편한 신청, 다중 검사 도구, 명확한 검사 결과, 주기적 재검사">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/features.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="images/로고투명.png" alt="IngressX"></a>
+      <div class="nav__menu">
+        <a href="index.html#why" class="nav__link">왜 필요한가</a>
+        <a href="index.html#product" class="nav__link">제품소개</a>
+        <a href="features.html" class="nav__link active">핵심기능</a>
+        <a href="index.html#effect" class="nav__link">도입효과</a>
+      </div>
+      <button class="nav__toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mini Hero -->
+  <section class="hero hero--mini">
+    <div class="hero__content">
+      <h1 class="hero__title hero__title--inline">
+        <img class="brand" src="images/로고투명.png" alt="IngressX">
+        핵심기능
+      </h1>
+      <p class="hero__desc">신청-검사-승인의 체계적 프로세스로<br>오픈소스를 안전하게 관리합니다.</p>
+    </div>
+  </section>
+
+  <!-- Feature 1: 표준화 프로세스 -->
+  <section class="section" id="f1">
+    <div class="container">
+      <div class="feature-section fade-in">
+        <div class="feature-text">
+          <div class="feature-text__num"><span>1</span> FEATURE</div>
+          <h3>체계적인 표준화 프로세스</h3>
+          <p>개발자의 Public Repository 직접 연결을 차단하고 개발자 파일을 그대로 활용하여 반입 신청, 자동 다운로드, 검사, 승인 등 WEB UI 기반의 편리한 표준화 프로세스를 제공합니다.</p>
+          <div class="feature-text__highlight">
+            신청-검사-승인의 체계적 프로세스<br>
+            책임 소재가 명확한 거버넌스(Governance)를 제공합니다.
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="process-visual">
+            <table class="process-table process-table--nowrap">
+              <thead>
+                <tr>
+                  <th>단계</th>
+                  <th>수행자</th>
+                  <th>행위</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>1. 신청</strong></td>
+                  <td>신청자(개발자)</td>
+                  <td>pom.xml 등 "의존성 선언 파일" 업로드</td>
+                </tr>
+                <tr>
+                  <td><strong>2. 검사</strong></td>
+                  <td>검사자</td>
+                  <td>검사 실행 &rarr; 자동 분석/다운로드/CVE 스캔</td>
+                </tr>
+                <tr>
+                  <td><strong>3. 승인요청</strong></td>
+                  <td>검사자</td>
+                  <td>검사 결과 검토 후 승인자에게 승인 요청</td>
+                </tr>
+                <tr>
+                  <td><strong>4. 승인/반려</strong></td>
+                  <td>승인자</td>
+                  <td>검사 결과 기반 최종 판단</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 2: 간편한 신청 -->
+  <section class="section section--light" id="f2">
+    <div class="container">
+      <div class="feature-section feature-section--reverse fade-in">
+        <div class="feature-text">
+          <div class="feature-text__num"><span>2</span> FEATURE</div>
+          <h3>간편한 신청</h3>
+          <p>개발자가 프로젝트에서 사용 중인 "의존성 선언 파일"을 그대로 업로드합니다. 별도의 파일 변환, 가공이나 로컬 CLI 도구 설치가 불필요합니다.</p>
+          <div class="feature-text__highlight">
+            새로운 도구를 배울 필요가 없습니다.<br>
+            이미 사용 중인 "의존성 선언 파일" 하나면 충분합니다.
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="file-cards">
+            <div class="file-card">
+              <div class="file-card__icon file-card__icon--maven">XML</div>
+              <div>
+                <div class="file-card__name">pom.xml</div>
+                <div class="file-card__desc">Maven 프로젝트</div>
+              </div>
+            </div>
+            <div class="file-card">
+              <div class="file-card__icon file-card__icon--gradle">G</div>
+              <div>
+                <div class="file-card__name">build.gradle</div>
+                <div class="file-card__desc">Gradle 프로젝트</div>
+              </div>
+            </div>
+            <div class="file-card">
+              <div class="file-card__icon file-card__icon--npm">{ }</div>
+              <div>
+                <div class="file-card__name">package.json</div>
+                <div class="file-card__desc">npm 프로젝트</div>
+              </div>
+            </div>
+            <div class="file-card">
+              <div class="file-card__icon file-card__icon--pip">Py</div>
+              <div>
+                <div class="file-card__name">requirements.txt</div>
+                <div class="file-card__desc">pip (Python) 프로젝트</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 3: 자동 의존성 분석 -->
+  <section class="section" id="f3">
+    <div class="container">
+      <div class="feature-section fade-in">
+        <div class="feature-text">
+          <div class="feature-text__num"><span>3</span> FEATURE</div>
+          <h3>자동 의존성 분석, 자동 다운로드</h3>
+          <p>Direct(직접), Transitive(전이) 의존성까지 자동으로 분석 및 해석합니다. 1개의 오픈소스 라이브러리 신청 시 전이(간접) 의존성 분석을 통해 수십 개의 의존성 라이브러리를 확인하고 자동으로 다운로드합니다.</p>
+          <ul class="feature-text__list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              필요한 모든 패키지 자동 수집
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              버전 정보 정확히 매칭
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              휴먼 에러 방지 (의존성 누락/검사 누락 원천 방지)
+            </li>
+          </ul>
+          <div class="feature-text__highlight">
+            개발자가 보지 못하는 숨겨진 의존성까지<br>IngressX가 자동으로 찾아내고 검사합니다.
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="dep-tree">
+            <span class="direct">spring-boot-starter-web (Direct)</span><br>
+            &nbsp;&nbsp;├── <span class="transitive">spring-boot-starter</span><br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── spring-boot<br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── spring-boot-autoconfigure<br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── spring-core<br>
+            &nbsp;&nbsp;├── <span class="transitive">spring-boot-starter-json</span><br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── jackson-databind<br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── jackson-datatype-jdk8<br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── jackson-module-parameter-names<br>
+            &nbsp;&nbsp;├── <span class="transitive">spring-boot-starter-tomcat</span><br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;├── tomcat-embed-core<br>
+            &nbsp;&nbsp;│&nbsp;&nbsp;&nbsp;└── tomcat-embed-websocket<br>
+            &nbsp;&nbsp;├── <span class="transitive">spring-web</span><br>
+            &nbsp;&nbsp;└── <span class="transitive">spring-webmvc</span><br>
+            <span class="count">1개 신청 &rarr; 13개 의존성 자동 분석</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 4: 다중 검사 도구 -->
+  <section class="section section--light" id="f4">
+    <div class="container">
+      <div class="feature-section feature-section--reverse fade-in">
+        <div class="feature-text">
+          <div class="feature-text__num"><span>4</span> FEATURE</div>
+          <h3>다중 검사 도구를 활용한<br>취약점 검사</h3>
+          <p>단일 검사 도구로는 놓치는 취약점이 존재합니다. 다중 검사 도구로 상호 보완하여 탐지 범위를 확대합니다.</p>
+          <div class="feature-text__highlight">
+            각각 DB를 가진 검사도구들이 상호 보완하여<br>
+            검사 사각지대를 최소화합니다.
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="scanner-cards">
+            <div class="scanner-card">
+              <div class="scanner-card__logo scanner-card__logo--trivy">Trivy</div>
+              <div class="scanner-card__info">
+                <h4>Trivy</h4>
+                <p>Aqua Security &middot; 범용 보안 스캔</p>
+                <p>GHSA, NVD 등 소스 활용</p>
+                <span class="scanner-card__badge">Apache 2.0 라이선스</span>
+              </div>
+            </div>
+            <div class="scanner-plus">+</div>
+            <div class="scanner-card">
+              <div class="scanner-card__logo scanner-card__logo--grype">Grype</div>
+              <div class="scanner-card__info">
+                <h4>Grype</h4>
+                <p>Anchore &middot; 취약점 전문 스캔</p>
+                <p>GHSA, NVD 등 소스 활용</p>
+                <span class="scanner-card__badge">Apache 2.0 라이선스</span>
+              </div>
+            </div>
+            <div class="scanner-plus">+</div>
+            <div class="scanner-card">
+              <div class="scanner-card__logo scanner-card__logo--custom">+</div>
+              <div class="scanner-card__info">
+                <h4>상용 SW 검사 도구</h4>
+                <p>추가 연동 가능 (별도 협의)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 5: 명확한 검사 결과 -->
+  <section class="section" id="f5">
+    <div class="container">
+      <div class="feature-section fade-in">
+        <div class="feature-text">
+          <div class="feature-text__num"><span>5</span> FEATURE</div>
+          <h3>명확한 검사 결과 제공</h3>
+          <p>취약점 정보, 어려워하지 마세요. 한눈에 파악할 수 있습니다.</p>
+          <ul class="feature-text__list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>CVE ID</strong> &mdash; 국제 표준 취약점 식별자
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>위험도 점수</strong> &mdash; CVSS 기반 심각도 점수 (0.0 ~ 10.0)
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>심각도 등급</strong> &mdash; Critical / High / Medium / Low / None
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>영향 오픈소스</strong> &mdash; 취약점이 존재하는 오픈소스명 및 버전
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              <strong>조치 권장 버전</strong> &mdash; 최소한으로 업그레이드해야 하는 안전 버전
+            </li>
+          </ul>
+        </div>
+        <div class="feature-visual">
+          <div class="result-visual">
+            <table class="result-table">
+              <thead>
+                <tr>
+                  <th>CVE ID</th>
+                  <th>심각도</th>
+                  <th>CVSS</th>
+                  <th>영향 패키지</th>
+                  <th>권장 버전</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>CVE-2021-44228</td>
+                  <td><span class="severity-badge severity-badge--critical">Critical</span></td>
+                  <td><strong>10.0</strong></td>
+                  <td>log4j-core 2.14.1</td>
+                  <td>2.17.1</td>
+                </tr>
+                <tr>
+                  <td>CVE-2022-22965</td>
+                  <td><span class="severity-badge severity-badge--critical">Critical</span></td>
+                  <td><strong>9.8</strong></td>
+                  <td>spring-beans 5.3.17</td>
+                  <td>5.3.18</td>
+                </tr>
+                <tr>
+                  <td>CVE-2023-34035</td>
+                  <td><span class="severity-badge severity-badge--high">High</span></td>
+                  <td><strong>7.5</strong></td>
+                  <td>spring-security 6.1.0</td>
+                  <td>6.1.2</td>
+                </tr>
+                <tr>
+                  <td>CVE-2023-20883</td>
+                  <td><span class="severity-badge severity-badge--medium">Medium</span></td>
+                  <td><strong>5.3</strong></td>
+                  <td>spring-boot 3.0.6</td>
+                  <td>3.0.7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature 6: 주기적 재검사 -->
+  <section class="section section--light" id="f6">
+    <div class="container">
+      <div class="feature-section feature-section--reverse fade-in">
+        <div class="feature-text">
+          <div class="feature-text__num"><span>6</span> FEATURE</div>
+          <h3>주기적 재검사로<br>지속적인 취약점 대응</h3>
+          <p>이미 내부로 유입된 오픈소스에 대해서도 지속적인 보안 관리를 유지합니다. 신규 CVE 공개 시 영향을 받는 오픈소스를 즉시 탐지합니다.</p>
+          <ul class="feature-text__list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              관리자 수동 재검사 실행
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              시스템 스케줄 재검사 실행
+            </li>
+          </ul>
+          <div class="feature-text__highlight">
+            이미 내부로 유입된 오픈소스에 대해서도<br>
+            지속적인 보안 관리를 유지합니다.
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="rescan-cycle">
+            <div class="rescan-step">
+              <div class="rescan-step__icon rescan-step__icon--red">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <div class="rescan-step__text">
+                <h4>CVE 공개</h4>
+                <p>신규 취약점 정보 발표</p>
+              </div>
+            </div>
+            <div class="rescan-arrow">&darr;</div>
+            <div class="rescan-step">
+              <div class="rescan-step__icon rescan-step__icon--blue">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div class="rescan-step__text">
+                <h4>재검사 실행</h4>
+                <p>내부 Nexus 전수 검사</p>
+              </div>
+            </div>
+            <div class="rescan-arrow">&darr;</div>
+            <div class="rescan-step">
+              <div class="rescan-step__icon rescan-step__icon--yellow">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <div class="rescan-step__text">
+                <h4>영향 목록</h4>
+                <p>사용 중인 취약 패키지 식별</p>
+              </div>
+            </div>
+            <div class="rescan-arrow">&darr;</div>
+            <div class="rescan-step">
+              <div class="rescan-step__icon rescan-step__icon--green">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <div class="rescan-step__text">
+                <h4>조치</h4>
+                <p>사용 중지 / 업데이트 / 예외 처리</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture -->
+  <section class="section" id="arch">
+    <div class="container">
+      <div class="section__header fade-in">
+        <h2>시스템 아키텍처</h2>
+      </div>
+      <div class="arch fade-in">
+        <!-- UI Layer -->
+        <div class="arch__layer arch__layer--ui">
+          <div class="arch__label">사용자 인터페이스</div>
+          <div class="arch__items">
+            <div class="arch__item">&lt;/&gt; 개발자 UI</div>
+            <div class="arch__item">&#128269; 검사자 UI</div>
+            <div class="arch__item">&#9989; 승인자 UI</div>
+          </div>
+        </div>
+
+        <div class="arch__connector">&darr;</div>
+
+        <!-- Engine Layer -->
+        <div class="arch__layer arch__layer--engine">
+          <div class="arch__label">IngressX Engine</div>
+          <div class="arch__items">
+            <div class="arch__item">워크플로우 엔진</div>
+            <div class="arch__item">분석 엔진</div>
+            <div class="arch__item">수집 엔진</div>
+            <div class="arch__item">검사 엔진</div>
+          </div>
+        </div>
+
+        <div class="arch__connector">&darr;</div>
+
+        <!-- Repo Layer -->
+        <div class="arch__layer arch__layer--repo">
+          <div class="arch__label">Internal Repository</div>
+          <div class="arch__items">
+            <div class="arch__item">Repository 1</div>
+            <div class="arch__item">Repository 2</div>
+            <div class="arch__item">&bull;&bull;&bull;</div>
+            <div class="arch__item">Repository N</div>
+          </div>
+        </div>
+
+        <div class="arch__connector">&darr;</div>
+
+        <!-- Dev Layer -->
+        <div class="arch__layer arch__layer--dev">
+          <div class="arch__label">개발 환경</div>
+          <div class="arch__items">
+            <div class="arch__item">Maven</div>
+            <div class="arch__item">Gradle</div>
+            <div class="arch__item">npm</div>
+            <div class="arch__item">pip</div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="arch-info">
+          <div class="arch-info__box">
+            <h4>지원 오픈소스 생태계</h4>
+            <div class="arch-info__tags">
+              <span class="arch-info__tag arch-info__tag--eco">pom.xml (Maven)</span>
+              <span class="arch-info__tag arch-info__tag--eco">build.gradle (Gradle)</span>
+              <span class="arch-info__tag arch-info__tag--eco">package.json (npm)</span>
+              <span class="arch-info__tag arch-info__tag--eco">requirements.txt (pip)</span>
+            </div>
+          </div>
+          <div class="arch-info__box">
+            <h4>지원 검사 도구</h4>
+            <div class="arch-info__tags">
+              <span class="arch-info__tag arch-info__tag--scan">Trivy</span>
+              <span class="arch-info__tag arch-info__tag--scan">Grype</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark cta">
+    <div class="container">
+      <h2 class="fade-in">검사 및 승인되지 않은 오픈소스는<br>들어오지 못합니다</h2>
+      <p class="fade-in">IngressX 도입으로 안전한 오픈소스 관리 체계를 구축하세요.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__contacts">
+        <div class="footer__contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          techware@techware.co.kr
+        </div>
+        <div class="footer__contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          042-489-7515
+        </div>
+        <div class="footer__contact">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          www.IngressX.co.kr
+        </div>
+      </div>
+      <div class="footer__divider"></div>
+      <p class="footer__copy">&copy; 2026 (주)테크웨어. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
