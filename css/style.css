@@ -382,6 +382,14 @@ p {
   filter: brightness(0) invert(1);
 }
 
+.hero__sub {
+  font-size: 1rem;
+  color: #94A3B8;
+  margin-top: -8px;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
 .hero__desc {
   font-size: 1.25rem;
   color: #CBD5E1;
