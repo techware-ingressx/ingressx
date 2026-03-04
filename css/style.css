@@ -374,7 +374,8 @@ p {
   letter-spacing: 2px;
 }
 
-.hero__title .brand {
+.hero__title .brand,
+.hero__content > .brand {
   display: block;
   height: 200px;
   width: auto;
@@ -386,8 +387,8 @@ p {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: -4px;
-  margin-bottom: 20px;
+  margin-top: 4px;
+  margin-bottom: 8px;
   flex-wrap: wrap;
 }
 
@@ -1212,7 +1213,8 @@ p {
   h2 { font-size: 2rem; }
 
   .hero__title { font-size: 2rem; }
-  .hero__title .brand { height: 140px; }
+  .hero__title .brand,
+  .hero__content > .brand { height: 140px; }
 
   .stats { grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .threat-grid { grid-template-columns: 1fr; }
@@ -1276,7 +1278,8 @@ p {
   }
 
   .hero__title { font-size: 1.25rem; }
-  .hero__title .brand { height: 100px; }
+  .hero__title .brand,
+  .hero__content > .brand { height: 100px; }
   .hero__desc { font-size: 1.0625rem; }
   .hero__buttons { flex-direction: column; align-items: center; }
 
